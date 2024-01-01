@@ -86,7 +86,7 @@ export function app(): express.Express {
         var seo: any = {
           title: 'FitnessTrainer Tube',
           description:
-            ' Personal Training Online.Online Fitness Courses.',
+            'Personal Training Online.Online Fitness Courses.',
           image:
             'https://www.fitnesstrainer.tube/assets/images/profile-cover.png',
           site: 'https://www.fitnesstrainer.tube/',
