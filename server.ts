@@ -84,11 +84,11 @@ export function app(): express.Express {
         }
         const params = req.params[0];
         var seo: any = {
-          title: 'fitnesstrainer Tube',
+          title: 'FitnessTrainer Tube',
           description:
-            'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
+            ' Personal Training Online.Online Fitness Courses.',
           image:
-            'https://www.fitnesstrainer.tube/assets/images/Ht-Profile-pic-default.png',
+            'https://www.fitnesstrainer.tube/assets/images/profile-cover.png',
           site: 'https://www.fitnesstrainer.tube/',
           url: 'https://www.fitnesstrainer.tube' + params,
           keywords: 'fitnesstrainerTube',
@@ -155,7 +155,7 @@ export function app(): express.Express {
           const talent = {
             name: post?.title || post?.albumname || 'fitnesstrainer.Tube Post',
             description: pdhtml?.textContent || 'Post content',
-            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.fitnesstrainer.tube/assets/images/Ht-Profile-pic-default.png',
+            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.fitnesstrainer.tube/assets/images/profile-cover.png',
           };
           seo.title = talent.name;
           seo.description = strip_html_tags(talent.description);
@@ -170,7 +170,7 @@ export function app(): express.Express {
 
           console.log('group===>', group);
           const talent = {
-            name: `fitnesstrainerTube Research ${group?.PageTitle}`,
+            name: `FitnessTrainerTube Fitness Topics ${group?.PageTitle}`,
             description: group?.PageDescription,
             image: group?.CoverPicName || group?.ProfilePicName
           };

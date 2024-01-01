@@ -37,7 +37,7 @@ export class CommunitiesComponent {
     }
     // this.getCommunities();
     const data = {
-      title: 'HealingTube Health Practitioner',
+      title: 'FitnessTrainer Tube Trainers',
       url: `${window.location.href}`,
       description: '',
     };
@@ -95,7 +95,7 @@ export class CommunitiesComponent {
 
 
   createCommunity() {
-    this.router.navigate(['health-practitioner/add-practitioner'])
+    this.router.navigate(['fitness-trainers/add-practitioner'])
   }
   // createCommunity() {
   //   const modalRef = this.modalService.open(AddCommunityModalComponent, {
