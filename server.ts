@@ -153,7 +153,7 @@ export function app(): express.Express {
           const pdhtml = document.createElement('div');
           pdhtml.innerHTML = post?.postdescription || post?.metadescription;
           const talent = {
-            name: post?.title || post?.albumname || 'fitnesstrainer.Tube Post',
+            name: post?.title || post?.albumname || 'FitnessTrainer Tube Post',
             description: pdhtml?.textContent || 'Post content',
             image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.fitnesstrainer.tube/assets/images/profile-cover.png',
           };

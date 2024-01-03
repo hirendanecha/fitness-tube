@@ -3,9 +3,9 @@
   width: 100vw;
   // background: #11134d;
 
-  .text-s {
-    font-size: min(max(16px, 1vw), 22px);
-  }
+  // .text-s {
+  //   font-size: min(max(16px, 1vw), 22px);
+  // }
   .c-fonts {
     // font-size: min(max(25px, 2vw), 44px);
     font-size: 22px;
@@ -19,6 +19,7 @@
     background-image: url(/assets/images/landingpage/healing-hm-pg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     object-fit: cover;
     height: calc(100vh - 48px);
     min-height: 400px;
@@ -29,7 +30,8 @@
       background-color: #0b0d0ed4;
       border-radius: 5px;
       padding: 40px;
-      height: 300px;
+      // height: 300px;
+      // background-size: cover;
     }
 
     @media (max-width: 600px) {
