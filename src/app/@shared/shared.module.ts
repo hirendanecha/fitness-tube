@@ -216,7 +216,10 @@ export class SharedModule {
       faDownload,
       faShare,
       faGlobe,
-      faEye
+      faEye,
+      faDumbbell,
+      faSpa,
+      faPhone,
     );
   }
 }
