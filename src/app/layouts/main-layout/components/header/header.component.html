@@ -154,6 +154,7 @@
       >
         <div class="single-item">
           <div
+          *ngIf="tokenService.getCredentials()"
             class="icon-area d-center position-relative"
             (click)="openNotificationsModal()"
           >
