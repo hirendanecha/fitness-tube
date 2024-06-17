@@ -47,7 +47,7 @@ export class HealingPractitionerRegistrationComponent implements OnInit {
     const newParams = { ...queryParams };
     // console.log(this.router.routerState.snapshot.url);
     this.selectPractitionerPage =
-      this.router.routerState.snapshot.url.includes('request-video-call') ||
+      !this.router.routerState.snapshot.url.includes('request-video-call') ||
       false;
     this.isFromHome =
       this.router.routerState.snapshot.url.includes('request-video-call') ||
