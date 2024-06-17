@@ -147,18 +147,19 @@ export class HealingPractitionerRegistrationComponent implements OnInit {
     if (this.selectedCards.length > 0) {
       const practitionerRequirements = {
         selectedCard: this.selectedCards,
-        selectedCountry: this.selectedCountry,
-        selectedState: this.selectedState,
-        selectedAreas: this.selectedAreaValues,
+        // selectedCountry: this.selectedCountry,
+        // selectedState: this.selectedState,
+        // selectedAreas: this.selectedAreaValues,
       };
       this.router.navigate(['/fitness-trainers'], {
         state: { data: practitionerRequirements },
       });
-    } else if (this.isWorldwideChecked && this.selectedCards.length <= 0) {
-      const areaValues = { selectedAreas: this.selectedAreaValues };
-      this.router.navigate(['/fitness-trainers'], {
-        state: { data: areaValues },
-      });
+      // }
+      // else if (this.isWorldwideChecked && this.selectedCards.length <= 0) {
+      //   const areaValues = { selectedAreas: this.selectedAreaValues };
+      //   this.router.navigate(['/fitness-trainers'], {
+      //     state: { data: areaValues },
+      //   });
     } else {
       this.toastService.danger(
         'Please select What type of training are you interested in fitness courses'
