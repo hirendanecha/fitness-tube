@@ -369,7 +369,11 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
   }
 
   clearForm(){
-    this.router.navigate(['/fitness-trainers'])
+    if (this.data.Id) {
+      this.activeModal.close();
+    } else {
+      this.router.navigate(['/fitness-trainers']);
+    }
   }
 
   convertToUppercase(event: any) {
