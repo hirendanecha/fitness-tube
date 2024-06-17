@@ -25,7 +25,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-community-modal.component.scss'],
 })
 export class AddCommunityModalComponent implements OnInit, AfterViewInit {
-  @Input() title: string | undefined = 'Apply to be Fitness Trainers';
+  @Input() title: string | undefined = 'Personal Trainer Application';
   @Input() cancelButtonLabel: string | undefined = 'Cancel';
   @Input() confirmButtonLabel: string | undefined = 'Create';
   @Input() closeIcon: boolean | undefined;
@@ -175,7 +175,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
       this.spinner.show();
       const formData = this.communityForm.value;
       formData['emphasis'] = this.selectedValues;
-      formData['areas'] = this.selectedAreaValues;
+      // formData['areas'] = this.selectedAreaValues;
       if (this.communityForm.valid) {
         this.communityService.createCommunity(formData).subscribe({
           next: (res: any) => {

@@ -9,7 +9,7 @@
       (click)="activeModal.close()"
     /> -->
   </div>
-  
+
   <div class="modal-body text-center">
     <form
       class="form-dark row"
@@ -18,7 +18,7 @@
     >
       <div class="col-12 mb-5">
         <label class="form-label d-flex"
-          >Trainer Name<span class="text-danger">*</span></label
+          >Personal Trainer Name<span class="text-danger">*</span></label
         >
         <input
           type="text"
@@ -66,7 +66,7 @@
           />
         </div>
       </div>
-  
+
       <div class="col-12 mb-5 custom-textarea">
         <label class="form-label d-flex">Address</label>
         <input
@@ -76,27 +76,27 @@
           placeholder="Enter your Address"
           formControlName="address"
           required
-        >
+        />
       </div>
-  
+
       <div class="row">
         <div class="col-4 mb-3">
           <label class="form-label d-flex"
             >State<span class="text-danger">*</span></label
           >
           <select
-          id="State"
-          required
-          name="State"
-          class="input-area w-100"
-          [(ngModel)]="selectedState"
-        >
-          <option [value]="item.state" *ngFor="let item of allStateData">
-            {{ item.state }}
-          </option>
-        </select>
+            id="State"
+            required
+            name="State"
+            class="input-area w-100"
+            formControlName="State"
+          >
+            <option [value]="item.state" *ngFor="let item of allStateData">
+              {{ item.state }}
+            </option>
+          </select>
         </div>
-  
+
         <div class="col-4 mb-3">
           <label class="form-label d-flex"
             >City<span class="text-danger">*</span></label
@@ -140,7 +140,7 @@
           />
         </div>
       </div>
-  
+
       <div class="col-12 mb-5 custom-textarea">
         <label class="form-label d-flex">Description</label>
         <textarea
@@ -152,7 +152,7 @@
           required
         ></textarea>
       </div>
-  
+
       <div class="col-6 mb-5 d-grid">
         <label class="form-label d-flex"
           >Logo Image<span class="text-danger">*</span></label
@@ -163,7 +163,7 @@
           [url]="data?.logoImg"
         />
       </div>
-  
+
       <div class="col-6 mb-5 d-grid">
         <label class="form-label d-flex"
           >Cover Image<span class="text-danger">*</span></label
@@ -174,7 +174,7 @@
           [url]="data?.coverImg"
         />
       </div>
-  
+
       <div class="col-12 mb-5">
         <label class="form-label d-flex"
           >Trainer Url<span class="text-danger">*</span></label
@@ -196,12 +196,15 @@
       </div>
     </form>
   </div>
-  
+
   <div class="d-flex flex-column mt-4">
     <h4>Emphasis of Practice</h4>
     <div class="container">
       <div class="row">
-        <div *ngFor="let emphasis of practitionerEmphasis" class="col-md-6 col-lg-3">
+        <div
+          *ngFor="let emphasis of practitionerEmphasis"
+          class="col-md-6 col-lg-3"
+        >
           <div class="form-check">
             <div class="d-flex align-items-center">
               <input
@@ -212,7 +215,11 @@
                 (change)="onCheckboxChange($event, emphasis)"
               />
               <div class="title-container">
-                <label class="form-check-label ms-2" for="modality{{ emphasis.eId }}" [title]="emphasis.name">
+                <label
+                  class="form-check-label ms-2"
+                  for="modality{{ emphasis.eId }}"
+                  [title]="emphasis.name"
+                >
                   {{ emphasis.name }}
                 </label>
               </div>
@@ -222,7 +229,7 @@
       </div>
     </div>
   </div>
-  <div class="d-flex flex-column mt-6">
+  <!-- <div class="d-flex flex-column mt-6">
     <h4>Areas of Practice</h4>
     <div class="container">
       <div class="row">
@@ -246,15 +253,15 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div> -->
+
   <div class="modal-footer justify-content-end gap-3 border-0 mt-10">
     <button
       id="common-filter-cancel"
       type="button"
       class="cmn-btn alt p-2"
       (click)="clearForm()"
-      >
+    >
       <!-- (click)="activeModal.close('Cancel')" -->
       <!-- Cancel -->
       {{ cancelButtonLabel }}
