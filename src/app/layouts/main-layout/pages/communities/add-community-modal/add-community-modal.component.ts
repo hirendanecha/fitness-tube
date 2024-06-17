@@ -42,7 +42,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
   logoImg: any = {
     file: null,
     url: '',
-  };
+  };  
   coverImg: any = {
     file: null,
     url: '',
