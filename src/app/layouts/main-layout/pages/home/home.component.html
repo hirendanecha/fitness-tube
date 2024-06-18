@@ -496,7 +496,7 @@
                   (click)="createCommunityAdmin(member)"
                 >
                   <fa-icon [icon]="['fas', 'user-check']" />
-                  <span>Make {{ this.communityDetails.pageType === "community" ? "Dealership" : "Repair Shop" }} member</span>
+                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Repair Shop" }} member</span>
                 </a>
               </button>
               <button ngbDropdownItem *ngIf="member?.isAdmin === 'N'">
@@ -505,7 +505,7 @@
                   (click)="createCommunityAdmin(member)"
                 >
                   <fa-icon [icon]="['fas', 'user-check']" />
-                  <span>Make {{ this.communityDetails.pageType === "community" ? "Dealership" : "Repair Shop" }} admin</span>
+                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Repair Shop" }} admin</span>
                 </a>
               </button>
               <button ngbDropdownItem>
@@ -535,7 +535,7 @@
                   (click)="deleteCommunity()"
                 >
                   <fa-icon [icon]="['fas', 'trash-can']" />
-                  <span>Delete Dealership</span>
+                  <span>Delete Trainer</span>
                 </a>
               </button>
             </div>
@@ -553,7 +553,7 @@
         Delete
         {{
           communityDetails?.pageType === "community"
-            ? "Dealership"
+            ? "Trainer"
             : "Repair Shop"
         }}
       </button>
@@ -564,7 +564,7 @@
         (click)="removeFromCommunity()"
       >
         Leave {{ communityDetails?.pageType === "community"
-        ? "Dealership"
+        ? "Trainer"
         : "Repair Shop" }}
       </button>
     </ng-container>
