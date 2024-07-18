@@ -14,5 +14,9 @@ export const environment = {
   tubeUrl: tubeUrl,
   domain: '.fitnesstrainer.tube',
   siteKey:'0x4AAAAAAAUwDv2sJ3UlZCEf',
-  secretKey:'0x4AAAAAAAUwDilFmDq516h-owR9Q0Ew5hk'
+  secretKey:'0x4AAAAAAAUwDilFmDq516h-owR9Q0Ew5hk',
+  stripe_key: 'pk_test_51MwOHTSJJZB3pTDyqpZk5NJDaWkbuGiruTp79We9CcR2oODObX93TleYFTJj2qLowRuRL1DRTSIl8Vb1YiFyW7e900BYWlZKSM',
+  EncryptIV: 8625401029409790,
+  EncryptKey: 8625401029409790,
+  qrLink: `${webUrl}settings/edit-profile/`,
 };

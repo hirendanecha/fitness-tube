@@ -69,7 +69,7 @@ export class SeoService {
     }
 
     if (!tagValue.image) {
-      tagValue.image = 'https://freedom.buzz/assets/images/banner/FitnessTrainerLogo.jpg';
+      tagValue.image = 'https://fitnesstrainer.tube/assets/images/banner/FitnessTrainerLogo.jpg';
     }
 
     this.meta.updateTag({

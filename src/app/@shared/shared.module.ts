@@ -85,6 +85,32 @@ import {
   faRefresh,
   faEyeSlash,
   faSquarePlus,
+  faEnvelope,
+  faPaperclip,
+  faEllipsisH,
+  faSearch,
+  faBan,
+  faFileVideo,
+  faSliders,
+  faCopy,
+  faPhoneSlash,
+  faEllipsisV,
+  faUsers,
+  faCommentAlt,
+  faPencil,
+  faReply,
+  faPhotoFilm,
+  faUserTimes,
+  faRepeat,
+  faMobile,
+  faTicketAlt,
+  faTableList,
+  faChevronLeft,
+  faPhoneFlip,
+  faVoicemail,
+  faCircleChevronUp,
+  faCircleChevronDown,
+  faPhoneVolume,
 } from '@fortawesome/free-solid-svg-icons';
 import { ClaimTokenModalComponent } from './modals/clai-1776-token-modal/claim-token-modal.component';
 import { WalletLinkComponent } from './modals/wallet-download-modal/1776-wallet.component';
@@ -112,6 +138,16 @@ import { HealthPraatitionerCardComponent } from './components/health-partitioner
 import { AppointmentCallComponent } from './modals/appointment-call/appointment-call.component';
 import { ConferenceLinkComponent } from './modals/create-conference-link/conference-link-modal.component';
 import { AppointmentModalComponent } from './modals/appointment-modal/appointment-modal.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { IncomingcallModalComponent } from './modals/incoming-call-modal/incoming-call-modal.component';
+import { OutGoingCallModalComponent } from './modals/outgoing-call-modal/outgoing-call-modal.component';
+import { CreateGroupModalComponent } from './modals/create-group-modal/create-group-modal.component';
+import { EditGroupModalComponent } from './modals/edit-group-modal/edit-group-modal.component';
+import { MediaGalleryComponent } from './components/media-gallery/media-gallery.component';
+import { GalleryImgPreviewComponent } from './components/gallery-img-preview/gallery-img-preview.component';
+import { QrScanModalComponent } from './modals/qrscan-modal/qrscan-modal.component';
+import { ForwardChatModalComponent } from './modals/forward-chat-modal/forward-chat-modal.component';
+import { AppQrModalComponent } from './modals/app-qr-modal/app-qr-modal.component';
 // import { AppointmentModalComponent } from './modals/appointment-modal/appointment-modal.component';
 
 const sharedComponents = [
@@ -136,11 +172,21 @@ const sharedComponents = [
   EditResearchModalComponent,
   SharePostModalComponent,
   RePostCardComponent,
-  EditPostModalComponent,
   HealthPraatitionerCardComponent,
-  AppointmentCallComponent,
+  EditPostModalComponent,
   ConferenceLinkComponent,
-  AppointmentModalComponent
+  IncomingcallModalComponent,
+  OutGoingCallModalComponent,
+  CreateGroupModalComponent,
+  EditGroupModalComponent,
+  MediaGalleryComponent,
+  GalleryImgPreviewComponent,
+  QrScanModalComponent,
+  AppQrModalComponent,
+  ForwardChatModalComponent,
+  AppointmentModalComponent,
+  AppointmentCallComponent,
+  ConferenceLinkComponent
 ];
 
 const sharedModules = [
@@ -157,6 +203,7 @@ const sharedModules = [
   FontAwesomeModule,
   PipeModule,
   MentionModule,
+  QRCodeModule,
   // PdfViewerModule
 ];
 
@@ -225,7 +272,49 @@ export class SharedModule {
       faFilePdf,
       faDownload,
       faShare,
+      faHouseMedical,
+      faStethoscope,
+      faArrowLeftLong,
+      faArrowRightLong,
       faGlobe,
+      faList,
+      faCircle,
+      faEnvelope,
+      faPaperclip,
+      faPhone,
+      faEllipsisH,
+      faSearch,
+      faBan,
+      faFileVideo,
+      faSliders,
+      faCopy,
+      faPhoneSlash,
+      faEllipsisV,
+      faUsers,
+      faCommentAlt,
+      faLayerGroup,
+      faGear,
+      faPencil,
+      faRefresh,
+      faRightFromBracket,
+      faReply,
+      faUserTimes,
+      faPhotoFilm,
+      faRepeat,
+      faMobile,
+      faEye,
+      faEyeSlash,
+      faTicketAlt,
+      faPhotoFilm,
+      faCopy,
+      faSquarePlus,
+      faTableList,
+      faChevronLeft,
+      faPhoneFlip,
+      faVoicemail,
+      faPhoneVolume,
+      faCircleChevronUp,
+      faCircleChevronDown,
       faEye,
       faDumbbell,
       faSpa,
