@@ -18,7 +18,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./add-page-modal.component.scss'],
 })
 export class AddFreedomPageComponent implements OnInit, AfterViewInit {
-  @Input() title: string | undefined = 'Create Fitness Pages';
+  @Input() title: string | undefined = 'Create Health Topics';
   @Input() cancelButtonLabel: string | undefined = 'Cancel';
   @Input() confirmButtonLabel: string | undefined = 'Create';
   @Input() closeIcon: boolean | undefined;
@@ -51,8 +51,7 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
   });
   allCountryData: any;
   defaultCountry = 'US';
-  allStateData: any;
-  @ViewChild('zipCode') zipCode: ElementRef;
+@ViewChild('zipCode') zipCode: ElementRef;
   inputLinkValue1 = '';
   inputLinkValue2 = '';
   advertizement = {
@@ -60,7 +59,8 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
     link1: null,
     link2: null
   }
-
+  allStateData: any;
+  
   constructor(
     public activeModal: NgbActiveModal,
     private spinner: NgxSpinnerService,
@@ -96,11 +96,12 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
       this.pageForm.get('State').enable();
       this.pageForm.get('City').enable();
       this.pageForm.get('County').enable();
-      console.log(this.data);
     }
   }
 
   ngAfterViewInit(): void {
+    this.inputLinkValue1 = this.data?.link1 || null;
+    this.inputLinkValue2 = this.data?.link2 || null;
     fromEvent(this.zipCode.nativeElement, 'input')
       .pipe(debounceTime(1000))
       .subscribe((event) => {
@@ -210,12 +211,6 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
                 this.spinner.hide();
               }
           });
-          if (this.data.link1 || this.data.link2) {
-            this.editAdvertizeMentLink(this.data.Id);
-          } else {
-            this.createAdvertizeMentLink(this.data.Id);
-          }
-          this.sharedService.advertizementLink = [];
       } else {
         this.spinner.hide();
         this.toastService.danger('Please enter mandatory fields(*) data.');
@@ -239,16 +234,21 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
                 this.spinner.hide();
               }
           });
+        if (this.data.link1 || this.data.link2) {
+          this.editAdvertizeMentLink(this.data.Id);
+        } else {
+          this.createAdvertizeMentLink(this.data.Id);
+        }
+        this.sharedService.advertizementLink = [];
       }
     }
   }
-
   createAdvertizeMentLink(id) {
     if (id && (this.advertizement.link1 || this.advertizement.link2)) {
       this.advertizement.communityId = id
       this.communityService.createAdvertizeMentLink(this.advertizement).subscribe({
         next: (res => {
-          console.log(res);
+          return;
         }),
         error: (err => {
           console.log(err)
@@ -266,7 +266,7 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
       }
       this.communityService.editAdvertizeMentLink(data).subscribe({
         next: (res => {
-          console.log(res);
+          return;
         }),
         error: (err => {
           console.log(err)
@@ -356,7 +356,6 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
       },
     });
   }
-
   onCountryChange(event: Event): void {
     const target = event.target as HTMLSelectElement;
     this.getAllState(target.value);
@@ -417,16 +416,14 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
   // }
   onTagUserInputChangeEvent(data: any): void {
     this.advertizement.link1 = data?.meta?.url
-    console.log(data)
   }
   onTagUserInputChangeEvent1(data): void {
     this.advertizement.link2 = data?.meta?.url
-    console.log(data)
   }
 
   convertToUppercase(event: any) {
     const inputElement = event.target as HTMLInputElement;
-    let inputValue = inputElement.value;   
+    let inputValue = inputElement.value;
     inputValue = inputValue.replace(/\s/g, '');
     inputElement.value = inputValue.toUpperCase();
   }

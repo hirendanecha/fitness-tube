@@ -27,7 +27,7 @@
               {{
                 communityDetails?.pageType === "community"
                   ? "Trainer"
-                  : "Repair Shop"
+                  : "Fitess page"
               }}
             </button>
           </ng-container>
@@ -59,7 +59,7 @@
                   {{
                     communityDetails?.pageType === "community"
                       ? "Trainer"
-                      : "Repair Shop"
+                      : "Fitess page"
                   }}
                 </button>
               </ng-template>
@@ -75,7 +75,7 @@
                 {{
                   communityDetails?.pageType === "community"
                     ? "Trainer"
-                    : "Repair Shop"
+                    : "Fitess page"
                 }}
               </button>
             </ng-template>
@@ -496,7 +496,7 @@
                   (click)="createCommunityAdmin(member)"
                 >
                   <fa-icon [icon]="['fas', 'user-check']" />
-                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Repair Shop" }} member</span>
+                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Fitess page" }} member</span>
                 </a>
               </button>
               <button ngbDropdownItem *ngIf="member?.isAdmin === 'N'">
@@ -505,7 +505,7 @@
                   (click)="createCommunityAdmin(member)"
                 >
                   <fa-icon [icon]="['fas', 'user-check']" />
-                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Repair Shop" }} admin</span>
+                  <span>Make {{ this.communityDetails.pageType === "community" ? "Trainer" : "Fitess page" }} admin</span>
                 </a>
               </button>
               <button ngbDropdownItem>
@@ -554,7 +554,7 @@
         {{
           communityDetails?.pageType === "community"
             ? "Trainer"
-            : "Repair Shop"
+            : "Fitess page"
         }}
       </button>
     </ng-container>
@@ -565,7 +565,7 @@
       >
         Leave {{ communityDetails?.pageType === "community"
         ? "Trainer"
-        : "Repair Shop" }}
+        : "Fitess page" }}
       </button>
     </ng-container>
   </div>
