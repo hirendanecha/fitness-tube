@@ -510,8 +510,8 @@
               </button>
               <button ngbDropdownItem>
                 <a
-                  [href]="'settings/view-profile/' + member?.profileId"
-                  class="droplist d-flex align-items-center gap-2"
+                class="droplist d-flex align-items-center gap-2"
+                [routerLink]="'/settings/view-profile/' + (member?.profileId || '')"
                 >
                   <fa-icon [icon]="['fas', 'user']" />
                   <span>View Profile</span>

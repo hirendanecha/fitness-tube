@@ -983,7 +983,7 @@ export class ProfileChatsListComponent
       backdrop: 'static',
     });
     const originUrl = `callId-${new Date().getTime()}`;
-    const parts = window.location.href.split('/');
+    const parts = location.href.split('/');
     const lastParam = parts[parts.length - 1];
     const data = {
       ProfilePicName:

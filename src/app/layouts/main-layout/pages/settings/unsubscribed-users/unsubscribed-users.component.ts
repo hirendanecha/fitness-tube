@@ -20,7 +20,7 @@ export class UnsubscribedUsersComponent implements OnInit {
   ) { 
     const data = {
       title: 'FitnessTrainer Tube Unsubscribed User',
-      url: `${window.location.href}`,
+      url: `${location.href}`,
       description: '',
     };
     this.seoService.updateSeoMetaData(data);

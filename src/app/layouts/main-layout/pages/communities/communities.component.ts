@@ -38,7 +38,7 @@ export class CommunitiesComponent {
     // this.getCommunities();
     const data = {
       title: 'FitnessTrainer Tube Trainers',
-      url: `${window.location.href}`,
+      url: `${location.href}`,
       description: '',
     };
     this.seoService.updateSeoMetaData(data);

@@ -105,7 +105,7 @@ export class IncomingcallModalComponent
         );
       }
       if (this.isOnCall) {
-        const parts = window.location.href.split('/');
+        const parts = location.href.split('/');
         const callId = parts[parts.length - 1];
         this.calldata.link = callId;
         this.router.navigate([`/buzz-call/${callId}`], {

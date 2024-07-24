@@ -177,7 +177,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       });
       const data = {
         title: 'FitnessTrainer Tube',
-        url: `${window.location.href}`,
+        url: `${location.href}`,
       };
       this.seoService.updateSeoMetaData(data);
     }
