@@ -70,6 +70,7 @@ export class NotificationsComponent {
         this.toastService.success(
           res.message || 'Notification delete successfully'
         );
+        this.notificationList = [];
         this.getNotificationList();
       },
     });
